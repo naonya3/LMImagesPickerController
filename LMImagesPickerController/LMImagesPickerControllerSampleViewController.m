@@ -101,7 +101,6 @@
     headerView_ = nil;
 }
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -135,6 +134,7 @@
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     cell.textLabel.text = [formatter stringFromDate:(NSDate *)[asset valueForProperty:ALAssetPropertyDate]];
+    [formatter release];
     
     return cell;
 }

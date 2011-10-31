@@ -61,6 +61,7 @@
 - (void)dealloc
 {
     [asset_ release];
+    [selectedCover_ release];
     [super dealloc];
 }
 
