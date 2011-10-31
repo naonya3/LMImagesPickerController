@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B315BF64145A9C7900BBF54E /* LMImagesPickerCheckedImage.png in Resources */ = {isa = PBXBuildFile; fileRef = B315BF62145A9C7900BBF54E /* LMImagesPickerCheckedImage.png */; };
+		B315BF65145A9C7900BBF54E /* LMImagesPickerCheckedImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B315BF63145A9C7900BBF54E /* LMImagesPickerCheckedImage@2x.png */; };
+		B315BF71145AABC800BBF54E /* LMAsset.m in Sources */ = {isa = PBXBuildFile; fileRef = B315BF70145AABC700BBF54E /* LMAsset.m */; };
+		B3A570F51458004B00103157 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A570F41458004B00103157 /* UIKit.framework */; };
+		B3A570F71458004B00103157 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A570F61458004B00103157 /* Foundation.framework */; };
+		B3A570F91458004B00103157 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A570F81458004B00103157 /* CoreGraphics.framework */; };
+		B3A571021458004C00103157 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A571011458004C00103157 /* main.m */; };
+		B3A571051458004C00103157 /* LMImagesPickerControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A571041458004C00103157 /* LMImagesPickerControllerAppDelegate.m */; };
+		B3A571121458075E00103157 /* LMImagesPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A571111458075E00103157 /* LMImagesPickerController.m */; };
+		B3A57115145817A300103157 /* LMImagesPickerControllerSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A57114145817A300103157 /* LMImagesPickerControllerSampleViewController.m */; };
+		B3A571181458251200103157 /* LMAlbumSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A571171458251200103157 /* LMAlbumSelectViewController.m */; };
+		B3A5711A1458387000103157 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3A571191458387000103157 /* AssetsLibrary.framework */; };
+		B3A57125145928B600103157 /* LMAssetsSelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A57124145928B500103157 /* LMAssetsSelectViewController.m */; };
+		B3A5712814593C5300103157 /* LMAssetView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5712714593C5300103157 /* LMAssetView.m */; };
+		B3A5712C14593C8400103157 /* LMAssetsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5712B14593C8400103157 /* LMAssetsViewCell.m */; };
+		B3A5712F14594FB100103157 /* LMAssetsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3A5712E14594FB000103157 /* LMAssetsManager.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B315BF62145A9C7900BBF54E /* LMImagesPickerCheckedImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LMImagesPickerCheckedImage.png; sourceTree = "<group>"; };
+		B315BF63145A9C7900BBF54E /* LMImagesPickerCheckedImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LMImagesPickerCheckedImage@2x.png"; sourceTree = "<group>"; };
+		B315BF6F145AABC700BBF54E /* LMAsset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAsset.h; sourceTree = "<group>"; };
+		B315BF70145AABC700BBF54E /* LMAsset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAsset.m; sourceTree = "<group>"; };
+		B3A570F01458004B00103157 /* LMImagesPickerController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LMImagesPickerController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3A570F41458004B00103157 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B3A570F61458004B00103157 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B3A570F81458004B00103157 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B3A570FC1458004B00103157 /* LMImagesPickerController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LMImagesPickerController-Info.plist"; sourceTree = "<group>"; };
+		B3A571001458004C00103157 /* LMImagesPickerController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LMImagesPickerController-Prefix.pch"; sourceTree = "<group>"; };
+		B3A571011458004C00103157 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B3A571031458004C00103157 /* LMImagesPickerControllerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LMImagesPickerControllerAppDelegate.h; sourceTree = "<group>"; };
+		B3A571041458004C00103157 /* LMImagesPickerControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LMImagesPickerControllerAppDelegate.m; sourceTree = "<group>"; };
+		B3A571101458075E00103157 /* LMImagesPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImagesPickerController.h; sourceTree = "<group>"; };
+		B3A571111458075E00103157 /* LMImagesPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImagesPickerController.m; sourceTree = "<group>"; };
+		B3A57113145817A300103157 /* LMImagesPickerControllerSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMImagesPickerControllerSampleViewController.h; sourceTree = "<group>"; };
+		B3A57114145817A300103157 /* LMImagesPickerControllerSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMImagesPickerControllerSampleViewController.m; sourceTree = "<group>"; };
+		B3A571161458251200103157 /* LMAlbumSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAlbumSelectViewController.h; sourceTree = "<group>"; };
+		B3A571171458251200103157 /* LMAlbumSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAlbumSelectViewController.m; sourceTree = "<group>"; };
+		B3A571191458387000103157 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		B3A57123145928B500103157 /* LMAssetsSelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAssetsSelectViewController.h; sourceTree = "<group>"; };
+		B3A57124145928B500103157 /* LMAssetsSelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAssetsSelectViewController.m; sourceTree = "<group>"; };
+		B3A5712614593C5300103157 /* LMAssetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAssetView.h; sourceTree = "<group>"; };
+		B3A5712714593C5300103157 /* LMAssetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAssetView.m; sourceTree = "<group>"; };
+		B3A5712A14593C8400103157 /* LMAssetsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAssetsViewCell.h; sourceTree = "<group>"; };
+		B3A5712B14593C8400103157 /* LMAssetsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAssetsViewCell.m; sourceTree = "<group>"; };
+		B3A5712D14594FB000103157 /* LMAssetsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMAssetsManager.h; sourceTree = "<group>"; };
+		B3A5712E14594FB000103157 /* LMAssetsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMAssetsManager.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3A570ED1458004B00103157 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3A5711A1458387000103157 /* AssetsLibrary.framework in Frameworks */,
+				B3A570F51458004B00103157 /* UIKit.framework in Frameworks */,
+				B3A570F71458004B00103157 /* Foundation.framework in Frameworks */,
+				B3A570F91458004B00103157 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B315BF61145A9C7900BBF54E /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				B315BF62145A9C7900BBF54E /* LMImagesPickerCheckedImage.png */,
+				B315BF63145A9C7900BBF54E /* LMImagesPickerCheckedImage@2x.png */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		B3A570E51458004B00103157 = {
+			isa = PBXGroup;
+			children = (
+				B3A570FA1458004B00103157 /* src */,
+				B3A570F31458004B00103157 /* Frameworks */,
+				B3A570F11458004B00103157 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B3A570F11458004B00103157 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3A570F01458004B00103157 /* LMImagesPickerController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3A570F31458004B00103157 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3A571191458387000103157 /* AssetsLibrary.framework */,
+				B3A570F41458004B00103157 /* UIKit.framework */,
+				B3A570F61458004B00103157 /* Foundation.framework */,
+				B3A570F81458004B00103157 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B3A570FA1458004B00103157 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B3A5710F145804E000103157 /* lib */,
+				B3A571031458004C00103157 /* LMImagesPickerControllerAppDelegate.h */,
+				B3A571041458004C00103157 /* LMImagesPickerControllerAppDelegate.m */,
+				B3A57113145817A300103157 /* LMImagesPickerControllerSampleViewController.h */,
+				B3A57114145817A300103157 /* LMImagesPickerControllerSampleViewController.m */,
+				B3A570FB1458004B00103157 /* Supporting Files */,
+			);
+			name = src;
+			path = LMImagesPickerController;
+			sourceTree = "<group>";
+		};
+		B3A570FB1458004B00103157 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B3A570FC1458004B00103157 /* LMImagesPickerController-Info.plist */,
+				B3A571001458004C00103157 /* LMImagesPickerController-Prefix.pch */,
+				B3A571011458004C00103157 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B3A5710E145804C200103157 /* LMImagesPickerController */ = {
+			isa = PBXGroup;
+			children = (
+				B315BF61145A9C7900BBF54E /* resource */,
+				B3A571101458075E00103157 /* LMImagesPickerController.h */,
+				B3A571111458075E00103157 /* LMImagesPickerController.m */,
+				B3A571161458251200103157 /* LMAlbumSelectViewController.h */,
+				B3A571171458251200103157 /* LMAlbumSelectViewController.m */,
+				B3A57123145928B500103157 /* LMAssetsSelectViewController.h */,
+				B3A57124145928B500103157 /* LMAssetsSelectViewController.m */,
+				B3A5712614593C5300103157 /* LMAssetView.h */,
+				B3A5712714593C5300103157 /* LMAssetView.m */,
+				B3A5712A14593C8400103157 /* LMAssetsViewCell.h */,
+				B3A5712B14593C8400103157 /* LMAssetsViewCell.m */,
+				B3A5712D14594FB000103157 /* LMAssetsManager.h */,
+				B3A5712E14594FB000103157 /* LMAssetsManager.m */,
+				B315BF6F145AABC700BBF54E /* LMAsset.h */,
+				B315BF70145AABC700BBF54E /* LMAsset.m */,
+			);
+			name = LMImagesPickerController;
+			path = lib/LMImagesPickerController;
+			sourceTree = "<group>";
+		};
+		B3A5710F145804E000103157 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B3A5710E145804C200103157 /* LMImagesPickerController */,
+			);
+			name = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3A570EF1458004B00103157 /* LMImagesPickerController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3A5710B1458004C00103157 /* Build configuration list for PBXNativeTarget "LMImagesPickerController" */;
+			buildPhases = (
+				B3A570EC1458004B00103157 /* Sources */,
+				B3A570ED1458004B00103157 /* Frameworks */,
+				B3A570EE1458004B00103157 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LMImagesPickerController;
+			productName = LMImagesPickerController;
+			productReference = B3A570F01458004B00103157 /* LMImagesPickerController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3A570E71458004B00103157 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = ledmosquito;
+			};
+			buildConfigurationList = B3A570EA1458004B00103157 /* Build configuration list for PBXProject "LMImagesPickerController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B3A570E51458004B00103157;
+			productRefGroup = B3A570F11458004B00103157 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3A570EF1458004B00103157 /* LMImagesPickerController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3A570EE1458004B00103157 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B315BF64145A9C7900BBF54E /* LMImagesPickerCheckedImage.png in Resources */,
+				B315BF65145A9C7900BBF54E /* LMImagesPickerCheckedImage@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3A570EC1458004B00103157 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3A571021458004C00103157 /* main.m in Sources */,
+				B3A571051458004C00103157 /* LMImagesPickerControllerAppDelegate.m in Sources */,
+				B3A571121458075E00103157 /* LMImagesPickerController.m in Sources */,
+				B3A57115145817A300103157 /* LMImagesPickerControllerSampleViewController.m in Sources */,
+				B3A571181458251200103157 /* LMAlbumSelectViewController.m in Sources */,
+				B3A57125145928B600103157 /* LMAssetsSelectViewController.m in Sources */,
+				B3A5712814593C5300103157 /* LMAssetView.m in Sources */,
+				B3A5712C14593C8400103157 /* LMAssetsViewCell.m in Sources */,
+				B3A5712F14594FB100103157 /* LMAssetsManager.m in Sources */,
+				B315BF71145AABC800BBF54E /* LMAsset.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B3A571091458004C00103157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B3A5710A1458004C00103157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		B3A5710C1458004C00103157 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LMImagesPickerController/LMImagesPickerController-Prefix.pch";
+				INFOPLIST_FILE = "LMImagesPickerController/LMImagesPickerController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B3A5710D1458004C00103157 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LMImagesPickerController/LMImagesPickerController-Prefix.pch";
+				INFOPLIST_FILE = "LMImagesPickerController/LMImagesPickerController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3A570EA1458004B00103157 /* Build configuration list for PBXProject "LMImagesPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3A571091458004C00103157 /* Debug */,
+				B3A5710A1458004C00103157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3A5710B1458004C00103157 /* Build configuration list for PBXNativeTarget "LMImagesPickerController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3A5710C1458004C00103157 /* Debug */,
+				B3A5710D1458004C00103157 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3A570E71458004B00103157 /* Project object */;
+}
