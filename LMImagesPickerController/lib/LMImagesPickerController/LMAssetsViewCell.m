@@ -33,7 +33,7 @@
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
     
     if (self) {
-        self.selectionStyle = UITableViewCellEditingStyleNone;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
         assetViews_ = [[NSArray arrayWithObjects:
                        [[[LMAssetView alloc]init]autorelease]
                        ,[[[LMAssetView alloc]init]autorelease]

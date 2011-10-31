@@ -40,6 +40,8 @@
 - (void)dealloc
 {
     [headerView_ release];
+    [selectedItems_ release];
+    [assetLibrary_ release];
     [super dealloc];
 }
 
@@ -56,11 +58,20 @@
 }
 
 #pragma mark - LMImagesPickerControllerDelegate
-- (void)lmImagesPickerController:(LMImagesPickerController *)picker didFinishPickingMediaWithAssets:(NSArray *)assets
+- (void)lmImagesPickerController:(LMImagesPickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [selectedItems_ release];
+    [assetLibrary_ release];
+    assetLibrary_ = nil;
     selectedItems_ = nil;
-    selectedItems_ = [assets retain];
+    
+    // 選択した写真を取得
+    selectedItems_ = [[info objectForKey:LMImagesPickerControllerALAssets]retain];
+    
+    // ALAssetsLibraryは上記ALAssetの利用中に解放する事が出来ません。
+    // もし、解放した場合正常にデータにアクセスできなくなります。
+    assetLibrary_ = [[info objectForKey:LMImagesPickerControllerAssetsLibrary]retain];
+    
     [self dismissModalViewControllerAnimated:YES];
     [self.tableView reloadData];
 }

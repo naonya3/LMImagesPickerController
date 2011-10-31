@@ -28,11 +28,12 @@
 
 @implementation LMAssetsSelectViewController
 
-- (id)initWithAssetGroup:(ALAssetsGroup *)group picker:(LMImagesPickerController *)picker
+- (id)initWithAssetGroup:(ALAssetsGroup *)group assetsLibrary:(ALAssetsLibrary *)library picker:(LMImagesPickerController *)picker
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         picker_ = picker;
+        assetsLibrary_ = library;
         
         assetsGroup_ = [group retain];
         assetsManager_ = [[LMAssetsManager alloc]initWithAssetsGroup:assetsGroup_];
@@ -72,39 +73,7 @@
     
     self.navigationItem.title = @"Select";
     self.navigationItem.rightBarButtonItem = doneButton_;
-    [self.navigationItem.leftBarButtonItem setTitle:@"back"];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
-
-- (void)viewWillDisappear:(BOOL)animated
-{
-    [super viewWillDisappear:animated];
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    [super viewDidDisappear:animated];
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 #pragma mark - Table view data source
@@ -168,63 +137,19 @@
 - (void)doneTouch
 {
     if ([picker_ respondsToSelector:@selector(selectedItems:)]) {
-        [picker_ performSelector:@selector(selectedItems:) withObject:[assetsManager_ getSelectedAssets]];
+        NSDictionary *info = [NSDictionary dictionaryWithObjects:
+                              [NSArray arrayWithObjects:
+                                    [assetsManager_ getSelectedAssets]
+                                    ,assetsLibrary_
+                                    ,nil]
+                                                forKeys:
+                              [NSArray arrayWithObjects:
+                                    LMImagesPickerControllerALAssets
+                                    ,LMImagesPickerControllerAssetsLibrary
+                               ,nil]];
+        
+        [picker_ performSelector:@selector(selectedItems:) withObject:info];
     }
 }
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     [detailViewController release];
-     */
-}
-
-
 
 @end

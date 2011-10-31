@@ -70,7 +70,7 @@
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         picker_ = picker;
-        
+        assetsLibrary_ = [[ALAssetsLibrary alloc]init];
         cancelButton_ = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancelTouch)];
         
     }
@@ -96,7 +96,7 @@
     self.navigationItem.rightBarButtonItem = cancelButton_;
     
     // load Album
-    assetsLibrary_ = [[ALAssetsLibrary alloc]init];
+    
     assetGroups_ = [[NSMutableArray alloc]init];
     
     [self loadAlbum];
@@ -106,8 +106,6 @@
 {
     [super viewDidUnload];
     [assetGroups_ release];
-    [assetsLibrary_ release];
-    assetsLibrary_ = nil;
     assetGroups_ = nil;
 }
 
@@ -151,7 +149,7 @@
 #pragma mark - Table view delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    LMAssetsSelectViewController *lmAssetsSelectViewController = [[LMAssetsSelectViewController alloc]initWithAssetGroup:[assetGroups_ objectAtIndex:indexPath.row] picker:picker_];
+    LMAssetsSelectViewController *lmAssetsSelectViewController = [[LMAssetsSelectViewController alloc]initWithAssetGroup:[assetGroups_ objectAtIndex:indexPath.row] assetsLibrary:assetsLibrary_ picker:picker_];
     
     [self.navigationController pushViewController:lmAssetsSelectViewController animated:YES];
     [lmAssetsSelectViewController release];

@@ -30,6 +30,7 @@
 
 @interface LMImagesPickerControllerSampleViewController : UITableViewController<LMImagesPickerControllerDelegate, UINavigationControllerDelegate> {
     UIButton *headerView_;
+    ALAssetsLibrary *assetLibrary_;
     NSArray *selectedItems_;
 }
 

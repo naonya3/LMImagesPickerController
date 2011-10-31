@@ -26,15 +26,17 @@
 #import "LMImagesPickerController.h"
 #import "LMAlbumSelectViewController.h"
 
+NSString *const LMImagesPickerControllerAssetsLibrary = @"LMImagesPickerControllerAssetsLibrary";
+NSString *const LMImagesPickerControllerALAssets = @"LMImagesPickerControllerALAssets";
+
 @implementation LMImagesPickerController
 @synthesize delegate = delegate_, maxNumber = maxNumber_;
 
 #pragma mark - Private
-- (void)selectedItems:(NSArray *)items
+- (void)selectedItems:(NSDictionary *)info
 {
-    if ([delegate_ respondsToSelector:@selector(lmImagesPickerController:didFinishPickingMediaWithAssets:)]) {
-        
-        [delegate_ lmImagesPickerController:self didFinishPickingMediaWithAssets:items];
+    if ([delegate_ respondsToSelector:@selector(lmImagesPickerController:didFinishPickingMediaWithInfo:)]) {        
+        [delegate_ lmImagesPickerController:self didFinishPickingMediaWithInfo:info];
     }
 }
 
@@ -64,9 +66,5 @@
 {
     [super dealloc];
 }
-
-
-
-
 
 @end

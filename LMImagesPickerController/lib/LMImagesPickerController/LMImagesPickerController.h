@@ -27,6 +27,9 @@
 
 @protocol LMImagesPickerControllerDelegate;
 
+NSString *const LMImagesPickerControllerAssetsLibrary;
+NSString *const LMImagesPickerControllerALAssets;
+
 @interface LMImagesPickerController : UINavigationController {
     id<LMImagesPickerControllerDelegate, UINavigationControllerDelegate> delegate_;
     int maxNumber_;
@@ -40,7 +43,7 @@
 
 @protocol LMImagesPickerControllerDelegate <NSObject>
 
-- (void)lmImagesPickerController:(LMImagesPickerController *)picker didFinishPickingMediaWithAssets:(NSArray *)assets;
+- (void)lmImagesPickerController:(LMImagesPickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info;
 
 - (void)lmImagesPickerControllerDidCancel:(LMImagesPickerController *)picker;
 

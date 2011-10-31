@@ -30,11 +30,12 @@
 
 @interface LMAssetsSelectViewController : UITableViewController {
     ALAssetsGroup *assetsGroup_;
+    ALAssetsLibrary *assetsLibrary_;
     LMAssetsManager *assetsManager_;
     UIBarButtonItem *doneButton_;
     LMImagesPickerController *picker_;
 }
 
-- (id)initWithAssetGroup:(ALAssetsGroup *)group picker:(LMImagesPickerController *)picker;
+- (id)initWithAssetGroup:(ALAssetsGroup *)group assetsLibrary:(ALAssetsLibrary *)library picker:(LMImagesPickerController *)picker;
 
 @end
