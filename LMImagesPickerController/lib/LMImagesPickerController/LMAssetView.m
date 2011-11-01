@@ -82,10 +82,6 @@
 }
 
 #pragma mark - user interaction Event
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-
-}
-
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     asset_.selected = !asset_.selected;
@@ -94,16 +90,6 @@
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     NSNotification *notification = [NSNotification notificationWithName:@"LMAssetChangeEvent" object:self];
     [center postNotification:notification];
-}
-
-- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [selectedCover_ removeFromSuperview];
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [selectedCover_ removeFromSuperview];
 }
 
 @end
