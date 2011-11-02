@@ -30,38 +30,29 @@
 #pragma mark - Private
 
 - (void)loadAlbum
-{
-    
+{    
     __block typeof(self) this = self;
-    
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^
+    void (^usingBlock)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop) 
     {
-        NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-        
-        void (^usingBlock)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop) 
+        if (group == nil) 
         {
-            if (group == nil) 
-            {
-                return;
-            }
-            
-            [assetGroups_ addObject:group];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [this.tableView reloadData];
-            });
-        };
+            return;
+        }
         
-        void (^failureBlock)(NSError *) = ^(NSError *error) {
-            
-        };
+        [assetGroups_ addObject:group];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [this.tableView reloadData];
+        });
+    };
+    
+    void (^failureBlock)(NSError *) = ^(NSError *error) {
 
-        [assetsLibrary_ enumerateGroupsWithTypes:ALAssetsGroupAlbum | ALAssetsGroupSavedPhotos
-                                      usingBlock:usingBlock
-                                    failureBlock:failureBlock];
-        
-        [pool release];
-    });
+    };
+
+    [assetsLibrary_ enumerateGroupsWithTypes:ALAssetsGroupAlbum | ALAssetsGroupSavedPhotos
+                                  usingBlock:usingBlock
+                                failureBlock:failureBlock];        
 }
 
 #pragma mark - Init
