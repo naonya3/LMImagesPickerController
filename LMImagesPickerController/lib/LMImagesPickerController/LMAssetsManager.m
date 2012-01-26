@@ -116,6 +116,11 @@
     return count;
 }
 
+- (int)numberOfRow
+{
+    return [rows_ count] - 1;
+}
+
 - (void)clearALLSelected
 {
     

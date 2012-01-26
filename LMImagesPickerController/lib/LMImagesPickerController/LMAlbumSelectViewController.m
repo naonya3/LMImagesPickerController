@@ -30,8 +30,10 @@
 #pragma mark - Private
 
 - (void)loadAlbum
-{    
+{
+    
     __block typeof(self) this = self;
+    
     void (^usingBlock)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop) 
     {
         if (group == nil) 
@@ -39,7 +41,7 @@
             return;
         }
         
-        [assetGroups_ addObject:group];
+        [assetGroups_ insertObject:group atIndex:0];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [this.tableView reloadData];
@@ -47,12 +49,12 @@
     };
     
     void (^failureBlock)(NSError *) = ^(NSError *error) {
-
+        
     };
 
     [assetsLibrary_ enumerateGroupsWithTypes:ALAssetsGroupAlbum | ALAssetsGroupSavedPhotos
                                   usingBlock:usingBlock
-                                failureBlock:failureBlock];        
+                                    failureBlock:failureBlock];
 }
 
 #pragma mark - Init

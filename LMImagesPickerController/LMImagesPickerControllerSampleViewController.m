@@ -130,7 +130,7 @@
     UIImage *image = [UIImage imageWithCGImage:[asset thumbnail]];
     [cell.imageView setImage:image];
     
-    
+
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     [formatter setDateStyle:NSDateFormatterMediumStyle];
     cell.textLabel.text = [formatter stringFromDate:(NSDate *)[asset valueForProperty:ALAssetPropertyDate]];

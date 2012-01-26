@@ -43,6 +43,8 @@
 
 - (int)numberOfSelected;
 
+- (int)numberOfRow;
+
 - (NSArray *)getSelectedAssets;
 
 /*
